@@ -1,0 +1,16 @@
+{
+  "name": "event-wrapper",
+  "version": "1.0.0",
+  "description": "Temporarily wrap around your EventEmitters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "event",
+    "emitter",
+    "eventemitter"
+  ],
+  "author": "Ron Korving <rkorving@wizcorp.jp>",
+  "license": "MIT"
+}
