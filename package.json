@@ -1,8 +1,12 @@
 {
   "name": "event-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Temporarily wrap around your EventEmitters",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronkorving/event-wrapper"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
