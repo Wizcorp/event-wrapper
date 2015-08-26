@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ronkorving/event-wrapper"
+    "url": "https://github.com/Wizcorp/event-wrapper"
   },
   "scripts": {
     "test": "tape test/*.js"
