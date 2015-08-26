@@ -13,7 +13,7 @@ function createWrapper(emitter, cb) {
 
         cbs = null;
 
-        cb.apply(null, arguments);
+        cb.apply(emitter, arguments);
         cb = null;
     }
 
