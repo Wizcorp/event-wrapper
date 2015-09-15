@@ -40,3 +40,21 @@ test('events clean up', function (t) {
 	t.end();
 });
 
+test('final callback may throw', function (t) {
+	var emitter = new EE();
+
+	var wrap = createWrapper(emitter, function (error) {
+		throw new Error('Oh noes!');
+	});
+
+	wrap('foo', function () {
+		wrap.done();
+	});
+
+	emitter.emit('foo');
+
+	process.once('uncaughtException', function (error) {
+		t.equal(error.message, 'Oh noes!');
+		t.end();
+	});
+});

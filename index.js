@@ -13,8 +13,18 @@ function createWrapper(emitter, cb) {
 
         cbs = null;
 
-        cb.apply(emitter, arguments);
-        cb = null;
+        try {
+            cb.apply(emitter, arguments);
+        } catch (error) {
+            // Since the error happened during wrap.done(), we throw the error asynchronously.
+            // That way wrap.done will not be called again. It will instead be an uncaught exception.
+
+            setTimeout(function () {
+                throw error;
+            }, 0);
+        } finally {
+            cb = null;
+        }
     }
 
     function on() {
