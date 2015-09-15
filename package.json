@@ -1,6 +1,6 @@
 {
   "name": "event-wrapper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Temporarily wrap around your EventEmitters",
   "main": "index.js",
   "repository": {
